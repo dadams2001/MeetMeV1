@@ -9,3 +9,12 @@ export const getAllAttendees = () => {
     return results;
   });
 };
+
+// uninvite poeple operation 
+export const uninviteAttendee = () => {
+  const Attendee = Parse.Object.extend("Attendee");
+  const query = new Parse.Query(Attendee);
+  return query.find().then((attendee) => {
+    attendee.destroy();
+  });
+};
