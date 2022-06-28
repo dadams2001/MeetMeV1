@@ -1,0 +1,7 @@
+Violet Blue Crayola -- #7E78D2
+Lavender Web -- #E1E0E9
+Light Coral -- #EF767A
+Prussian Blue -- #003049
+Maximum Yellow Red -- #FCBF49
+
+https://www.w3schools.com/howto/howto_css_dropdown.asp

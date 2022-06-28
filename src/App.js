@@ -5,6 +5,10 @@ import {
 } from "react-router-dom";
 
 import Home from './pages/home/home.js';
+import CreateEvent from "./pages/CreateEvent/CreateEvent.js";
+import Profile from "./pages/Profile/Profile.js";
+import Login from "./pages/Login/Login.js";
+import Register from "./pages/Register/Register.js";
 
 import './App.css';
 
@@ -27,6 +31,10 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home/>} />
+          <Route path="/CreateEvent" element={<CreateEvent/>}/>
+          <Route path="/Profile" element={<Profile/>}/>
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Register" element={<Register/>}/>
         </Route>
       </Routes>
     </Router>
