@@ -1,6 +1,10 @@
 import './home.css';
+
+// Import Child Components
 import Footer from '../../components/footer/footer.js';
+import Header from '../../components/Header/Header';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
+
 //get atendees from function getAllAttendees
 import { getAllAttendees } from "../../Common/Services/GetAttendees";
 
@@ -19,8 +23,8 @@ export default function Home() {
 
     return (
       <div className="Home">
-        <header className='Home-header'>
-          <AttendeeDashboard attendees={attendees} />
+        <Header/>
+        <AttendeeDashboard attendees={attendees} />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -33,7 +37,6 @@ export default function Home() {
             HOME
           </a>
           <Footer/>
-        </header>
       </div>
     );
 }
