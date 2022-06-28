@@ -1,14 +1,19 @@
 .header-container {
-    width: 100vw;
-    background-color: #7E78D2;
+    width: 100%;
+    height:auto;
+    background-color: blue;
 }
-
+.meetme{
+    color: white;
+    padding: 1em; 
+}
 .navigation {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-size: 1em;
 }
 
 /*div container*/
@@ -16,6 +21,7 @@
     position: relative;
     display: inline-block;
     text-align: center;
+    padding: 0;
 }
 
 .dropbtn {
@@ -35,13 +41,17 @@
     position: absolute;
     background-color: blue;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
     z-index: 1;
+    text-align: center;
 }
 
 .dropdown-content a {
     color: white;
     text-decoration: none;
     display: block;
+    font-size: 1em;
+    text-align: center;
     padding: 1em 1.5em 1em 1.5em;
 }
 
@@ -59,10 +69,10 @@ background-color: navy;
 
 .dropdown:hover .dropbtn {
 background-color: navy;
+font-size: 1em;
 }
 
-/* 
-
+/*
 .dropdown-profile {
 position: relative;
 display: inline-block;
