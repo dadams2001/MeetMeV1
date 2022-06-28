@@ -12,19 +12,13 @@ import { getAllAttendees } from "../../Common/Services/GetAttendees";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [attendees, setAttendees] = useState([]);
 
-  useEffect(() => {
-    getAllAttendees().then((response) => {
-      setAttendees(response);
-    });
-  }, []);
 
 
     return (
       <div className="Home">
         <Header/>
-        <AttendeeDashboard attendees={attendees} />
+        <h1>Welcome to MeetMe</h1>
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
