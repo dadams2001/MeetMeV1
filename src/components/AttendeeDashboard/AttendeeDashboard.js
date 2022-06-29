@@ -1,5 +1,5 @@
 import './attendees.css';
-import Address from "./Address";
+import Address from "../Address/Address";
 
 const onClickHandler = (e) => {
   e.preventDefault();
@@ -17,7 +17,7 @@ const onChangeHandler = (e) => {
 export default function AttendeeDashboard({ attendees }) {
   return (
     <div>
-      <h3 class="listname">Attendees Invited</h3>
+      <h3 className="listname">Attendees Invited</h3>
       <div>
         {attendees.length > 0 && (
          <ul> 
