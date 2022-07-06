@@ -3,7 +3,7 @@ import Parse from "parse";
 export const createUser = (newUser) => {
   const user = new Parse.User();
 
-  user.set("username", newUser.userName);
+  user.set("username", newUser.email);
   user.set("firstName", newUser.firstName);
   user.set("lastName", newUser.lastName);
   user.set("password", newUser.password);
@@ -36,6 +36,7 @@ export const loginUser = async (userName, password) => {
     return user;
   } catch (error) {
     console.error(error);
+    alert("Invalid username/password");
     return "";
   }
 };

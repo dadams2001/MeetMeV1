@@ -10,23 +10,20 @@ import MainModule from "../../components/Main/Main.js";
 
 
 export default function Login() {
- 
-    return (
+     return (
       <div className="Login">
         <Header/>
         <h1>Login</h1>
         <p>Would you like to 
          </p>
-        <Link to="/register">
+        <Link to="/Register">
         <button>Register</button>
       </Link>
-      <br />
       <p>or</p>
-      <br />
-      <Link to="/login">
+      <Link to="/LoginForm">
         <button>Login</button>
       </Link>
-          <Footer/>
+      <Footer/>
       </div>
     );
 }
