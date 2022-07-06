@@ -1,20 +1,31 @@
 import React from "react";
+import{
+  BrowseRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
 import { Navigate, useNavigate } from "react-router-dom";
 
 // You can pass props using the spread operator to throw them on an object if there are too many to break out
-const ProtectedRoute = ({ component: Component, flag, ...rest }) => {
-  const navigate = useNavigate();
+const ProtectedRoute = ({ element: Component, flag, ...rest }) => {
+  const history = useNavigate();
+
+
   const goBackHandler = () => {
-    navigate.goBack();
+    history.goBack();
   };
+
   console.log(rest); // show rest.path in the console
-    return (
+  return (
     <div>
       {flag ? (
-        <Navigate to={rest.path} />
+        <Route render={()=><Navigate to={rest.path}/>} />
       ) : (
         <div>
-          <p>User Does not exist</p> <button onClick={goBackHandler}>Go back.</button>
+          <p>User Does not exist</p>{" "}
+          <button onClick={goBackHandler}>Go back.</button>
         </div>
       )}
     </div>

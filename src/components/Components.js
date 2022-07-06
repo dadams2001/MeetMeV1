@@ -25,9 +25,9 @@ export default function Components() {
           <Route path="/Profile" element={<Profile/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
-          <Route path="/main" component={MainModule} />
-        <Route path="/home" component={MainHome} />
-        <Route path="/user/:firstName/:lastName" component={MainGood} />
+          <Route path="/main" element={<MainModule />} />
+        <Route path="/home" element={<MainHome />} />
+        <Route path="/user/:firstName/:lastName" element={<MainGood />} />
         </Route>
         <Route
           path="*"
