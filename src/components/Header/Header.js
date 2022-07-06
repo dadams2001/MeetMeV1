@@ -23,7 +23,6 @@ export default function Header() {
                         <div class="dropdown-content">
                             <Link to="/Profile">PROFILE</Link>
                             <Link to="/Login">LOGIN</Link>
-                            <Link to="/Register">JOIN US</Link>
                         </div>
                     </div>
                 </li>
