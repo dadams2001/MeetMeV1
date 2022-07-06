@@ -10,6 +10,10 @@ import CreateEvent from "../pages/CreateEvent/CreateEvent.js";
 import Profile from "../pages/Profile/Profile.js";
 import Login from "../pages/Login/Login.js";
 import Register from "../pages/Register/Register.js";
+import MainModule from "./Main/Main.js";
+import MainGood from "./Main/MainGood";
+import MainHome from "./Main/MainHome";
+
 
 export default function Components() {
   return (
@@ -21,6 +25,9 @@ export default function Components() {
           <Route path="/Profile" element={<Profile/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
+          <Route path="/main" component={MainModule} />
+        <Route path="/home" component={MainHome} />
+        <Route path="/user/:firstName/:lastName" component={MainGood} />
         </Route>
         <Route
           path="*"
