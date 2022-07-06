@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 import Parse from "parse";
 
-const LoginForm = () => {
+const LoginForm = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
   const [userName, getUserName] = useState("");
   const [password, getPassword] = useState("");
@@ -28,9 +28,10 @@ const LoginForm = () => {
 
   const buttonHandler = (e) => {
     e.preventDefault();
-    loginUser(userName, password).then((user) => {
+    loginUser(userName, password, setIsLoggedIn).then((user) => {
       // console.log(Parse.User.current());
       if (user) {
+        setIsLoggedIn(true);
         navigate (
           "/user/" + user.get("firstName") + "/" + user.get("lastName")
         );

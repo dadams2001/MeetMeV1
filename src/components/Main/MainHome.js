@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProtectedRoute from "../../Common/AppTools/ProtectedRoute";
+import ProtectedRouteBad from "../../Common/AppTools/ProtectedRouteBad";
 import MainGood from "./MainGood";
 import Parse from "parse";
 
@@ -25,7 +25,7 @@ const MainHome = () => {
 
   return (
     <div>
-      <ProtectedRoute
+      <ProtectedRouteBad
         exact
         path={`/user/${firstName}/${lastName}`}
         flag={flag}
