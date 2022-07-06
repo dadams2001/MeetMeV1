@@ -13,6 +13,7 @@ import Register from "../pages/Register/Register.js";
 import MainModule from "./Main/Main.js";
 import MainGood from "./Main/MainGood";
 import MainHome from "./Main/MainHome";
+import LoginForm from "../pages/LoginForm/LoginForm.js";
 
 
 export default function Components() {
@@ -26,8 +27,9 @@ export default function Components() {
           <Route path="/Login" element={<Login/>}/>
           <Route path="/Register" element={<Register/>}/>
           <Route path="/main" element={<MainModule />} />
-        <Route path="/home" element={<MainHome />} />
-        <Route path="/user/:firstName/:lastName" element={<MainGood />} />
+          <Route path="/home" element={<MainHome />} />
+          <Route path="/LoginForm" element={<LoginForm/>} />
+          <Route path="/user/:firstName/:lastName" element={<MainGood />} />
         </Route>
         <Route
           path="*"

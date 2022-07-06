@@ -1,9 +1,9 @@
-#RegisterFormContainer {
+#LoginFormContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-#RegisterFormContainer * {
+#LoginFormContainer * {
     margin: 8px 0;
 }
