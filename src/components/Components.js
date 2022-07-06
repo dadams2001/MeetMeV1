@@ -17,6 +17,7 @@ import MainGood from "./Main/MainGood";
 import MainHome from "./Main/MainHome";
 import LoginForm from "../pages/LoginForm/LoginForm.js";
 import ProtectedRouteBad from "../Common/AppTools/ProtectedRouteBad.js";
+import ProtectedRouteGood from "../Common/AppTools/ProtectedRouteGood.js";
 
 export default function Components() {
   const [ isLoggedIn, setIsLoggedIn ] = useState(null);
@@ -27,11 +28,30 @@ export default function Components() {
           <Route index element={<Home/>} />
           <Route path="/CreateEvent" element={<CreateEvent/>}/>
           <Route path="/Profile" element={<Profile/>}/>
-          <Route path="/Login" element={<Login/>}/>
-          <Route path="/Register" element={<Register/>}/>
+          <Route 
+            path="/Login" 
+            element={
+            <ProtectedRouteGood isLoggedIn={isLoggedIn}>
+              <Login/>
+            </ProtectedRouteGood>
+          }/>
+          <Route 
+            path="/Register" 
+            element={
+              <ProtectedRouteGood isLoggedIn={isLoggedIn}>
+                <Register setIsLoggedIn={setIsLoggedIn}/>
+              </ProtectedRouteGood>
+          }/>
           <Route path="/main" element={<MainModule />} />
           <Route path="/home" element={<MainHome />} />
-          <Route path="/LoginForm" element={<LoginForm setIsLoggedIn={setIsLoggedIn}/>} />
+          <Route 
+            path="/LoginForm" 
+            element={
+              <ProtectedRouteGood isLoggedIn={isLoggedIn} >
+                <LoginForm setIsLoggedIn={setIsLoggedIn}/>
+              </ProtectedRouteGood>
+            }
+          />
           <Route 
             path="/user/:firstName/:lastName" 
             element={

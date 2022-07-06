@@ -1,12 +1,5 @@
 import { useEffect } from "react";
-import{
-  BrowseRouter,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch
-} from "react-router-dom";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // You can pass props using the spread operator to throw them on an object if there are too many to break out
 const ProtectedRouteBad = ({ children, isLoggedIn }) => {
@@ -16,13 +9,9 @@ const ProtectedRouteBad = ({ children, isLoggedIn }) => {
     if(!isLoggedIn) {
       navigate("/login");
     }
-  },[isLoggedIn]);
-  
-  { 
-    if(isLoggedIn) {
-      return children;
-    }
-  }
+  },[isLoggedIn, navigate]);
+
+    return children;
 };
 
 export default ProtectedRouteBad;

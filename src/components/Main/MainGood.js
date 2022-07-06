@@ -10,7 +10,7 @@ const MainGood = () => {
         You're all logged in {firstName} {lastName}!
       </h1>
       <button>
-        <Link to="/main">Go back.</Link>
+        <Link to="/home">Home</Link>
       </button>
     </div>
   );

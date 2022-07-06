@@ -10,7 +10,7 @@ import { createUser } from "../../Common/Services/AuthService";
 import { useNavigate } from "react-router-dom";
 import Parse from "parse";
 
-const Register = () => {
+const Register = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
 
   // prevent invalid session token
@@ -35,12 +35,13 @@ const Register = () => {
           alert(
             `${userCreated.get("firstName")}, you successfully registered!`
           );
-          navigate("/main");
+          setIsLoggedIn(true);
+          navigate("/user/"+ userCreated.get("firstName") + "/" + userCreated.get("lastName"));
         }
         setAdd(false);
       });
     }
-  }, [newUser, add, navigate]);
+  }, [newUser, add, navigate, setIsLoggedIn]);
 
   const onChangeHandler = (e) => {
     e.preventDefault();
