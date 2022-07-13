@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const ProtectedRouteGood = ({ children, isLoggedIn }) => {
   const navigate = useNavigate();
-
   useEffect(() => {
     if(isLoggedIn) {
       navigate("/profile");
