@@ -4,9 +4,10 @@ import './App.css';
 import Components from "./components/Components";
 
 //given as setup
-// import "./styles.css";
+
 import Parse from "parse";
 import * as Env from "./enviroments.js";
+import React  from "react";
 
 //PARSE baseline
 Parse.initialize(Env.APPLICATION_ID, Env.JAVASCRIPT_KEY);
@@ -17,5 +18,4 @@ function App() {
     <Components/>
   );
 }
-
 export default App;

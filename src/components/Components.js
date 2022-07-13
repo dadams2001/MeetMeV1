@@ -27,7 +27,7 @@ export default function Components() {
         <Route path="/">
           <Route index element={<Home/>} />
           <Route path="/CreateEvent" element={<CreateEvent/>}/>
-          <Route path="/Profile" element={<Profile/>}/>
+          <Route path="/Profile" element={<Profile isLoggedIn={isLoggedIn}/>}/>
           <Route 
             path="/Login" 
             element={
