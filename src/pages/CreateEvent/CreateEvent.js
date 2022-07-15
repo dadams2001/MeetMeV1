@@ -7,7 +7,6 @@ import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashbo
 
 //get atendees from function getAllAttendees
 import { getAllAttendees } from "../../Common/Services/GetAttendees";
-
 //useEffect and useState
 import { useEffect, useState } from "react";
 
