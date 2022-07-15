@@ -3,6 +3,7 @@ import Map,{MapProvider, Marker} from "react-map-gl";
 import {render} from 'react-dom';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
+const MAPBOX_TOKEN = 'pk.eyJ1IjoibHN0YXJrMiIsImEiOiJjbDVqdDV4anIwM2NiM2psNjhpd3cyYTI1In0.bjPfymUND6DBvNHIOOMNDg';
 /*STATELESS CHILD COMPONENT */
 const Address = ({ onChange, onClick }) => {
 
@@ -46,7 +47,7 @@ const Address = ({ onChange, onClick }) => {
       initialViewState ={initialViewState}
       {...settings}
       style={{width: 600, height: 400}}
-      mapboxApiAccessToken={process.env.MAPBOX_TOKEN} 
+      mapboxAccessToken={MAPBOX_TOKEN} 
       mapStyle="mapbox://styles/mapbox/streets-v9"
       >
         Marker Here
