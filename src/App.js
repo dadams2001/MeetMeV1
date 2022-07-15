@@ -1,5 +1,5 @@
 import './App.css';
-
+import {render} from 'react-dom';
 // Import Components
 import Components from "./components/Components";
 
@@ -13,9 +13,12 @@ import React  from "react";
 Parse.initialize(Env.APPLICATION_ID, Env.JAVASCRIPT_KEY);
 Parse.serverURL = Env.SERVER_URL;
 
-function App() {
+export default function App() {
   return (
     <Components/>
   );
 }
-export default App;
+
+export function renderToDom(container) {
+  render(<App />, container);
+}
