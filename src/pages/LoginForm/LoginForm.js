@@ -29,7 +29,6 @@ const LoginForm = ({setIsLoggedIn}) => {
   const buttonHandler = (e) => {
     e.preventDefault();
     loginUser(userName, password, setIsLoggedIn).then((user) => {
-      // console.log(Parse.User.current());
       if (user) {
         setIsLoggedIn(true);
         navigate (

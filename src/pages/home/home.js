@@ -5,8 +5,8 @@ import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
 
-//get atendees from function getAllAttendees
-import { getAllAttendees } from "../../Common/Services/GetAttendees";
+//get atendees from function getEventAttendess
+import { getEventAttendess } from "../../Common/Services/GetAttendees";
 
 //useEffect and useState
 import { useEffect, useState } from "react";
