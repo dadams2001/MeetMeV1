@@ -5,6 +5,7 @@ import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
 
+
 //get atendees from function getEventAttendess
 import { getEventAttendees } from "../../Common/Services/GetAttendees";
 
