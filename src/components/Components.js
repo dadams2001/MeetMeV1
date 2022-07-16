@@ -56,7 +56,7 @@ export default function Components() {
             path="/user/:firstName/:lastName" 
             element={
               <ProtectedRouteBad isLoggedIn={isLoggedIn}>
-                <MainGood/>
+                <Profile/>
               </ProtectedRouteBad>
             }
           />

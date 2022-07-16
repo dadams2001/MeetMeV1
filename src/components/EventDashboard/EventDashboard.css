@@ -1,0 +1,9 @@
+.listname
+{
+    color: darkblue;
+}
+
+.EventsList {
+    list-style: none;
+    padding: 0;
+}
