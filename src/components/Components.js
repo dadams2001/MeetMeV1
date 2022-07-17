@@ -18,6 +18,7 @@ import MainHome from "./Main/MainHome";
 import LoginForm from "../pages/LoginForm/LoginForm.js";
 import ProtectedRouteBad from "../Common/AppTools/ProtectedRouteBad.js";
 import ProtectedRouteGood from "../Common/AppTools/ProtectedRouteGood.js";
+import MyEvent from "../pages/MyEvent/MyEvent.js";
 
 export default function Components() {
   const [ isLoggedIn, setIsLoggedIn ] = useState(null);
@@ -61,6 +62,10 @@ export default function Components() {
             }
           />
         </Route>
+        <Route
+          path="/events/:UserId/:EventId"
+          element={<MyEvent/>}
+        />
         <Route
           path="*"
           element={

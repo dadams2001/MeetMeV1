@@ -12,9 +12,6 @@ import { getEventAttendess } from "../../Common/Services/GetAttendees";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-
-
-
     return (
       <div className="Home">
         <Header/>
