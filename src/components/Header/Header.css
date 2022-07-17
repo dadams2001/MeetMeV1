@@ -59,6 +59,18 @@
 background-color: navy;
 }
 
+#logout {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    padding: 1em 1.5em 1em 1.5em;
+}
+
+#logout:hover {
+    background-color: navy;
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
