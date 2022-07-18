@@ -1,5 +1,5 @@
  import React, {useState} from "react";
-import Map,{MapProvider, Marker} from "react-map-gl";
+import Map,{GeolocateControl, MapProvider, Marker} from "react-map-gl";
 import {render} from 'react-dom';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -35,8 +35,8 @@ const Address = ({ onChange, onClick }) => {
      <h3>Address</h3>
      <p>Enter Party Location below</p>
       <form>
-        <input text="test" onChange={onChange} />
-        <button type="submit" onClick={onClick}>
+        <input text="test" onChange={onChange}  class= "form-control form-control-lg" text="test" />
+        <button type="submit" onClick={onClick} class="btn btn-primary btn-block">
           Submit
         </button>
         </form>
@@ -50,7 +50,8 @@ const Address = ({ onChange, onClick }) => {
       mapboxAccessToken={MAPBOX_TOKEN} 
       mapStyle="mapbox://styles/mapbox/streets-v9"
       >
-        Marker Here
+        <Marker longitude={ -86.238899} latitude={41.699280} color="red" />
+        <GeolocateControl />
       </Map>
       </MapProvider>
      </div>
