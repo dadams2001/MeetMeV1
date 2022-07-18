@@ -41,7 +41,6 @@ const Profile = (props)  => {
       <Header/>
       <div class="user-settings">
         <h1>Welcome back, {user.get("firstName") + ' ' + user.get("lastName")}</h1>
-        <br />
         <ul class="list" >
         <li>Full Name: <strong>{user.get('firstName')+' '+user.get('lastName')}</strong></li>
       <li>Username: <strong>{user.get('username')}</strong></li>
