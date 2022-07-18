@@ -1,8 +1,10 @@
+import createEventForm from "../CreateEventForm/createEventForm";
  import React, {useState} from "react";
 import Map,{GeolocateControl, MapProvider, Marker} from "react-map-gl";
 import {render} from 'react-dom';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
+import CreateEvent from "../../pages/CreateEvent/CreateEvent";
 const MAPBOX_TOKEN = 'pk.eyJ1IjoibHN0YXJrMiIsImEiOiJjbDVqdDV4anIwM2NiM2psNjhpd3cyYTI1In0.bjPfymUND6DBvNHIOOMNDg';
 /*STATELESS CHILD COMPONENT */
 const Address = ({ onChange, onClick }) => {
@@ -31,6 +33,8 @@ const Address = ({ onChange, onClick }) => {
 
   return (
     <div>
+      <br />
+      <createEventForm />
       <br />
      <h3>Address</h3>
      <p>Enter Party Location below</p>
@@ -61,7 +65,4 @@ const Address = ({ onChange, onClick }) => {
 
 export default Address;
 
-export function renderToDom(container) {
-  render(<Address />, container);
-}
 
