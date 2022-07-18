@@ -20,6 +20,7 @@
     transition-duration: 0.4s;
     background-color: #236e96;
     color: white;
+    font-size: .75em;
 }
 .form-button:hover{
     background-color: #0c3b55;

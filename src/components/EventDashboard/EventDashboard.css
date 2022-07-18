@@ -13,3 +13,21 @@
     margin-bottom: 100px;
     width: 350px;
 }
+
+.buttonlink{
+    padding: .5em;
+    font-size:.75em;
+    border-radius: 25px;
+    border-color: #236e96; 
+    transition-duration: 0.4s;
+    background-color: #236e96;
+    color: white;
+}
+.buttonlink:hover{
+    background-color: #0c3b55;
+    color: #FFFBF0;
+}
+.user-settings{
+    align-items: left;
+
+}
