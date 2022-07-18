@@ -18,9 +18,6 @@ function GuestGreeting(props) {
  
 const Profile = (props)  => {
   const user = Parse.User.current();
-  const profilePhoto = user.get("profile_picture");   
-
-//   <img src={profilePhoto.url()} alt="profile-picture"/>
   
   const doRequestPasswordReset  = async function (props)
   {
@@ -45,7 +42,6 @@ const Profile = (props)  => {
       <Header/>
       <div class="user-settings">
         <h1>Welcome back, {user.get("firstName") + ' ' + user.get("lastName")}</h1>
-
         <ul class="list" >
         <li>Full Name: <strong>{user.get('firstName')+' '+user.get('lastName')}</strong></li>
       <li>Username: <strong>{user.get('username')}</strong></li>

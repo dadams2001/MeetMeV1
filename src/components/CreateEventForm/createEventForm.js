@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
  
 const createEventForm = ({event, onChange, onSubmit}) =>{
+    
   return(
   <div>
     <form onSubmit={onSubmit} autoComplete="off">
