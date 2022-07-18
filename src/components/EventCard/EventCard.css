@@ -4,4 +4,11 @@
     border: 1px solid darkblue;
     border-radius: 5px;
     padding: 5%;
+    width: 300px;
+    margin: 15px;
+}
+
+.EventCardContainer p
+{
+    color: #686868;
 }
