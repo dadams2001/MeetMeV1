@@ -1,7 +1,8 @@
 import './App.css';
-import {render} from 'react-dom';
+
 // Import Components
 import Components from "./components/Components";
+import {render} from 'react-dom';
 
 //given as setup
 

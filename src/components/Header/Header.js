@@ -16,7 +16,7 @@ export default function Header() {
                 <ul class="navigation">
                     <li>
                         <div class="dropdown">
-                            <button class="dropbtn">MENU</button>
+                            <button class="dropbtn" id="menu"> MENU </button>
                             <div class="dropdown-content">
                                 <Link to="/CreateEvent">CREATE</Link>
                                 <Link to="/">HOME</Link>
@@ -28,7 +28,7 @@ export default function Header() {
                     </li>
                     <li>
                         <div class="dropdown">
-                            <button class="dropbtn">PROFILE</button>
+                            <button class="dropbtn" id='profile'>PROFILE</button>
                             <div class="dropdown-content">
                                 <Link to="/Profile">PROFILE</Link>
                                 <div id="logout" onClick={onLogoutHandler}>LOGOUT</div>

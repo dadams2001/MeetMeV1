@@ -16,17 +16,8 @@ export default function Home() {
       <div className="Home">
         <Header/>
         <h1>Welcome to MeetMe</h1>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            HOME
-          </a>
+          <p>First, begin by creating and event</p>
+          <p>Then, invite your friends through your profile!</p>
           <Footer/>
       </div>
     );
