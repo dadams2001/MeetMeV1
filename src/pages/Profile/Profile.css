@@ -30,3 +30,13 @@
     align-items: left;
 
 }
+
+img {
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin: 0px 50px 30px 0px;
+}
