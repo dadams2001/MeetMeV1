@@ -14,8 +14,11 @@ export default function EventCard({event}) {
     );
   }
   return (
-    <div onClick={onClickHandler}>
-      <h3 className="EventCardContainer">{event.get("EventName")}</h3>
+    <div  className="EventCardContainer" onClick={onClickHandler}>
+      {console.log(event.get("Date").toString())}
+      <h2>{event.get("EventName")}</h2>
+      <p>{event.get("Address")}</p>
+      <p>{event.get("Date").toString()}</p>
     </div>
   );
 }
