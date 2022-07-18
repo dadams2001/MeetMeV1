@@ -9,3 +9,23 @@
     color: #003049;
     position: relative;
 }
+
+.list{
+    list-style: none;
+}
+.form-button{
+    padding: .5em;
+    border-radius: 25px;
+    border-color: blue; 
+    transition-duration: 0.4s;
+    background-color: blue;
+    color: white;
+}
+.form-button:hover{
+    background-color: #E1E0E9;
+    color: blue;
+}
+.user-settings{
+    align-items: left;
+
+}

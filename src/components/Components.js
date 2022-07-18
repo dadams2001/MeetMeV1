@@ -18,7 +18,7 @@ import MainHome from "./Main/MainHome";
 import LoginForm from "../pages/LoginForm/LoginForm.js";
 import ProtectedRouteBad from "../Common/AppTools/ProtectedRouteBad.js";
 import ProtectedRouteGood from "../Common/AppTools/ProtectedRouteGood.js";
-import MyEvent from "../pages/MyEvent/MyEvent.js";
+import MyEvent from "../pages/MyEvent/MyEvent";
 
 export default function Components() {
   const [ isLoggedIn, setIsLoggedIn ] = useState(null);
