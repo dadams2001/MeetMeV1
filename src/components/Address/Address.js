@@ -31,11 +31,11 @@ const Address = ({ onChange, onClick }) => {
 
   return (
     <div>
-      <hr />
+      <br />
      <h3>Address</h3>
      <p>Enter Party Location below</p>
       <form>
-        <input text="test" onChange={onChange}  class= "form-control form-control-lg" text="test" />
+        <input text="test" onChange={onChange}  class= "form-control form-control-lg" />
         <button type="submit" onClick={onClick} class="btn btn-primary btn-block">
           Submit
         </button>

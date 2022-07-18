@@ -1,18 +1,7 @@
 import './attendees.css';
-import Address from "../Address/Address";
 
-const onClickHandler = (e) => {
-  e.preventDefault();
-  // Trigger add flag to create lesson and
-  // re-render list with new lesson
-};
 
-// Handler to track changes to the child input text
-const onChangeHandler = (e) => {
-  e.preventDefault();
-  console.log(e.target.value);
-  // Continuously updating name to be added on submit
-};
+
 //AttendeeDashboard function concatenates and displays the names on the parse back4app list
 export default function AttendeeDashboard({ attendees }) {
   return (
@@ -31,7 +20,7 @@ export default function AttendeeDashboard({ attendees }) {
       </ul>
       )}
       </div>
-      <Address onClick={onClickHandler} onChange={onChangeHandler} />
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 #RegisterFormContainer {
     display: flex;
+    background-color: #FFFBF0;
     flex-direction: row;
     justify-content: center;
 }

@@ -1,13 +1,39 @@
 import './MyEventGuest.css';
-import { useLocation } from 'react-router-dom';
-import copy from 'copy-to-clipboard';
+import Footer from '../../components/footer/footer.js';
+import Header from '../../components/Header/Header';
+import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
+import { getEventAttendees } from "../../Common/Services/GetAttendees";
+import { useEffect, useState } from "react";
+export default function MyEventGuest({event}, props) {
+    const d = event.get('Date');
+    const [attendees, setAttendees] = useState([]);
 
-export default function MyEventGuest({event}) {
+  useEffect(() => {
+    getEventAttendees("yia8siddLu").then((response) => {
+      setAttendees(response);
+    });
+  }, []);
+
     return(
-        <div>
+        <div class="container">
+            <Header />
+            <br />
             <h1>
-                {event.get("EventName") + " Guest"} 
+                You've been invited to a <strong>{event.get("EventName")} </strong>
             </h1>
+            <ul class="list-form">
+                <li>
+                    Day: { d.toDateString()}
+                </li>
+                <li>
+                    When: {d.toLocaleTimeString()}
+                </li>
+                <li>
+                    Where: {event.get('Address')}
+                </li>
+            </ul>
+            <AttendeeDashboard attendees={attendees} />
+            <Footer />
         </div>
         
     );
