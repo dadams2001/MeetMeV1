@@ -4,7 +4,7 @@ import './CreateEvent.css';
 import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
 import Address from "../../components/Address/Address";
-import CreateEventForm from '../../components/CreateEventForm/CreateEventForm';
+import CreateEventForm from '../../components/CreateEventForm/CreateEventForm.js';
 
 
 export default function CreateEvent() {
