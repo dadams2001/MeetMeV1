@@ -38,8 +38,8 @@ const Address = ({onChange, onClick }) => {
 
   return (
     <div>
-      <br />
-     <p>Enter Party Location below</p>
+
+     <p>Enter Party Address below for full details on location</p>
 
         <div
         ref={geocoderContainerRef}
@@ -50,7 +50,7 @@ const Address = ({onChange, onClick }) => {
         ref={mapRef}
         {...viewport}
         {...settings}
-        width="600"
+        width="400"
         height="400"
         onViewportChange={handleViewportChange}
         mapStyle="mapbox://styles/mapbox/streets-v9"
@@ -64,8 +64,10 @@ const Address = ({onChange, onClick }) => {
           position="top-left"
         />
       </Map>
-      <p>Copy and paste into your address box!</p>
+      
+      <br />
      </div>
+
   );
 };
 
