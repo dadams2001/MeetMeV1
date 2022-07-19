@@ -1,5 +1,4 @@
-import CreateEventForm from "../CreateEventForm/CreateEventForm";
- import React, {useState} from "react";
+import React, {useState} from "react";
 import Map,{GeolocateControl, MapProvider, Marker} from "react-map-gl";
 import {render} from 'react-dom';
 
