@@ -4,16 +4,16 @@ import './CreateEvent.css';
 import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
 import Address from "../../components/Address/Address";
+import CreateEventForm from '../../components/CreateEventForm/CreateEventForm';
 
 
 export default function CreateEvent() {
-  
     return (
       <div className="CreateEvent">
         <Header/>
-        <createEventForm />
+        <CreateEventForm />
         <Address />
-          <Footer/>
+        <Footer/>
       </div>
     );
 }
