@@ -1,4 +1,4 @@
-import createEventForm from "../CreateEventForm/createEventForm";
+import CreateEventForm from "../CreateEventForm/CreateEventForm";
  import React, {useState} from "react";
 import Map,{GeolocateControl, MapProvider, Marker} from "react-map-gl";
 import {render} from 'react-dom';
@@ -34,7 +34,6 @@ const Address = ({ onChange, onClick }) => {
   return (
     <div>
       <br />
-      <createEventForm />
       <br />
      <h3>Address</h3>
      <p>Enter Party Location below</p>
