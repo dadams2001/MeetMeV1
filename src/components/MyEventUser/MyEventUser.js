@@ -1,6 +1,7 @@
 import './MyEventUser.css';
 import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
+import Address from '../Address/Address';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
 import { useLocation } from 'react-router-dom';
 import copy from 'copy-to-clipboard';
@@ -95,6 +96,7 @@ export default function MyEventUser({event}, props) {
                 copy link
             </button>
             <AttendeeDashboard attendees={attendees} />
+            <Address />
             <Footer />
         </div>
        
