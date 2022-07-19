@@ -18,6 +18,7 @@ function GuestGreeting(props) {
  
 const Profile = (props)  => {
   const user = Parse.User.current();
+  
   const doRequestPasswordReset  = async function (props)
   {
         // Functions used by the screen components
@@ -58,8 +59,10 @@ const Profile = (props)  => {
         </div>
         <br />
         <br />
+        <div class="events">
         <EventDashboard UserPointer={user.id} />
         <Footer/>
+        </div>
       </div>);
   } else {
     return (

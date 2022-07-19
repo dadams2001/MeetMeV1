@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function MyEventGuest({event}, props) {
     const d = event.get('Date');
     const [attendees, setAttendees] = useState([]);
+    const [submitted, setSubmitted] = useState(null);
 
   useEffect(() => {
     getEventAttendees("yia8siddLu").then((response) => {
@@ -19,7 +20,7 @@ export default function MyEventGuest({event}, props) {
             <Header />
             <br />
             <h1>
-                You've been invited to a <strong>{event.get("EventName")} </strong>
+                You've been invited to a <strong>{event.get("EventName")} </strong>!
             </h1>
             <ul class="list-form">
                 <li>
@@ -33,6 +34,16 @@ export default function MyEventGuest({event}, props) {
                 </li>
             </ul>
             <AttendeeDashboard attendees={attendees} />
+            {(!submitted) ?
+                <div className='FormContainer'>
+                    <input type="text" placeholder='Enter your name!' />
+                    <button onClick={()=>setSubmitted(true)}>Submit</button>
+                </div>
+                :
+                <p>
+                    We'll see you there!
+                </p>
+            }
             <Footer />
         </div>
         

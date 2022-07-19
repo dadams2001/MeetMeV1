@@ -1,3 +1,4 @@
+
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
 import React, { useState, useRef, useCallback } from 'react'
@@ -70,7 +71,4 @@ const Address = ({onChange, onClick }) => {
 
 export default Address;
 
-export function renderToDom(container) {
-  render(<Address />, container);
-}
 
