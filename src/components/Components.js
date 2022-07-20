@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 
 import Home from '../pages/home/home.js';
-import CreateEvent from "../pages/CreateEvent/CreateEvent.js";
+import CreateEventPage from "../pages/CreateEvent/CreateEvent.js";
 import Profile from "../pages/Profile/Profile.js";
 import Login from "../pages/Login/Login.js";
 import Register from "../pages/Register/Register.js";
@@ -27,7 +27,7 @@ export default function Components() {
       <Routes>
         <Route path="/">
           <Route index element={<Home/>} />
-          <Route path="/CreateEvent" element={<CreateEvent/>}/>
+          <Route path="/CreateEvent" element={<CreateEventPage/>}/>
           <Route path="/Profile" element={<Profile isLoggedIn={isLoggedIn}/>}/>
           <Route 
             path="/Login" 
