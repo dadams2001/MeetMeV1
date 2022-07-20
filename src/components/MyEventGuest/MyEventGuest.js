@@ -2,6 +2,7 @@ import './MyEventGuest.css';
 import Footer from '../../components/footer/footer.js';
 import Header from '../../components/Header/Header';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
+import Address from '../Address/Address';
 import { getEventAttendees } from "../../Common/Services/GetAttendees";
 import { useEffect, useState } from "react";
 export default function MyEventGuest({event}, props) {
@@ -33,6 +34,7 @@ export default function MyEventGuest({event}, props) {
                     Where: {event.get('Address')}
                 </li>
             </ul>
+            <Address />
             <AttendeeDashboard attendees={attendees} />
             {(!submitted) ?
                 <div className='FormContainer'>
