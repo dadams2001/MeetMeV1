@@ -16,8 +16,6 @@ export default function CreateEventPage() {
 
 
   var userPointer = Parse.User.current(); 
-  const dateString = new Date();
-  
   const [newEvent, setNewEvent] = useState({
     EventName: "",
     Date: Date(),

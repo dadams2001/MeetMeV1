@@ -5,7 +5,6 @@ import Address from '../Address/Address';
 import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashboard';
 import { useLocation } from 'react-router-dom';
 import copy from 'copy-to-clipboard';
-import { User } from 'parse';
 import Parse from "parse";
 //get atendees from function getEventAttendess
 import { getEventAttendees } from "../../Common/Services/GetAttendees";
@@ -26,7 +25,7 @@ export default function MyEventUser({event}, props) {
     getEventAttendees(event.id).then((response) => {
       setAttendees(response);
     });
-  }, []);
+  }, [event.id]);
 
     return(
         <div class="MyEventUser">

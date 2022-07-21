@@ -6,7 +6,6 @@ import Address from '../Address/Address';
 import { getEventAttendees } from "../../Common/Services/GetAttendees";
 import { useEffect, useState } from "react";
 import { addNewAttendee } from '../../Common/Services/GetAttendees';
-import Parse from 'parse';
 
 export default function MyEventGuest({event}, props) {
     const d = event.get('Date');
@@ -18,7 +17,7 @@ export default function MyEventGuest({event}, props) {
     getEventAttendees(event.id).then((response) => {
       setAttendees(response);
     });
-  }, []);
+  }, [event.id]);
 
   const onSubmitHandler = () => {
     setSubmitted(true);

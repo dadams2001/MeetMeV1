@@ -9,8 +9,6 @@ import { useState } from "react";
 import { loginUser } from "../../Common/Services/AuthService";
 import { useNavigate } from "react-router-dom";
 
-import Parse from "parse";
-
 const LoginForm = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
   const [userName, getUserName] = useState("");
