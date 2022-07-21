@@ -5,6 +5,7 @@ import React, { useState, useRef, useCallback } from 'react'
 import Map, { InteractiveMap } from 'react-map-gl'
 import Geocoder from 'react-map-gl-geocoder'
 import {render} from "react-dom";
+import "./Address.css"
 
 const MAPBOX_TOKEN = 'pk.eyJ1IjoibHN0YXJrMiIsImEiOiJjbDVqdDV4anIwM2NiM2psNjhpd3cyYTI1In0.bjPfymUND6DBvNHIOOMNDg';
 
@@ -37,7 +38,7 @@ const Address = ({onChange, onClick }) => {
  
 
   return (
-    <div>
+    <div className='AddressContainer'>
 
      <p>Enter Party Address below for full details on location</p>
 

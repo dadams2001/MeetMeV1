@@ -10,7 +10,7 @@ export default function AttendeeDashboard({ attendees }) {
           
           {attendees.map((attendee) => (
           <li key={attendee.get("objectId")}>
-            {attendee.get("FirstName") + " " + attendee.get("LastName")}
+            {attendee.get("AttendeeName")}
           </li>
         
         ))}

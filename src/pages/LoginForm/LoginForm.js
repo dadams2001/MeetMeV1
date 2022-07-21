@@ -18,6 +18,7 @@ const LoginForm = ({setIsLoggedIn}) => {
 
   const onChangeHandlerUsername = (e) => {
     e.preventDefault();
+    console.log(e.target.value)
     getUserName(e.target.value);
   };
 
@@ -39,9 +40,9 @@ const LoginForm = ({setIsLoggedIn}) => {
   };
 
   return (
-    <div>
+    <div className="LoginFormContainer">
       <Header/>
-      <div id="LoginFormContainer">
+      <div>
         <LoginFormComp
           onChangeUserName={onChangeHandlerUsername}
           onChangePassword={onChangeHandlerPassword}

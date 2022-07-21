@@ -70,11 +70,8 @@ export default function CreateEventPage() {
         <Header/>
         <h2>Create Your Event Here</h2>
         <FormCreateEvent  event={newEvent} onSubmit={onSubmitHandler} onChange={onChangeHandler}/>
-        <br />
         <Address />
-          <br />
-          <br />
-          <Footer/>
+        <Footer/>
       </div>
     );
 }

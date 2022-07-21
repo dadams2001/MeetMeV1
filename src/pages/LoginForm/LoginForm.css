@@ -1,10 +1,5 @@
-#LoginFormContainer {
-    display: flex;
+.LoginFormContainer {
     background-color: #FFFBF0;
-    flex-direction: row;
-    justify-content: center;
-}
-
-#LoginFormContainer * {
-    margin: 8px 0;
+    min-width: 100vw;
+    min-height: 100vh;
 }

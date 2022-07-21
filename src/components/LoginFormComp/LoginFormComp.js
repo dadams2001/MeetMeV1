@@ -1,6 +1,8 @@
+import './LoginFormComp.css';
+
 const LoginFormComp = ({ onChangeUserName, onChangePassword, onSubmit }) => {
   return (
-    <div>
+    <div className='LoginFormCompContainer'>
       <form onSubmit={onSubmit} autoComplete="off">
         <div className="form-group">
           <label>Email</label>

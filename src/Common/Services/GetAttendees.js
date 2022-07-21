@@ -23,3 +23,23 @@ export const uninviteAttendee = () => {
     attendee.destroy();
   });
 };
+
+
+// Add New Attendee
+export const addNewAttendee = (AttendeeName, EventPointer) => {
+  const Attendee = Parse.Object.extend("Attendee");
+  const attendee = new Attendee();
+
+  attendee.set("AttendeeName", AttendeeName);
+  attendee.set("EventPointer", EventPointer);
+
+  attendee.save()
+  .then((gameScore) => {
+    // Execute any logic that should take place after the object is saved.
+    alert('New object created with objectId: ' + gameScore.id);
+  }, (error) => {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert('Failed to create new object, with error code: ' + error.message);
+  });
+}

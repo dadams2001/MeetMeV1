@@ -91,7 +91,7 @@ export default function MyEventUser({event}, props) {
                 Make sure to invite your friends! Share this party by sending the link below
             </p>
             <button class="btn-form"
-                onClick = {() =>{copy(path)}}
+                onClick = {() =>{copy("localhost:3000" + path)}}
             >
                 copy link
             </button>
