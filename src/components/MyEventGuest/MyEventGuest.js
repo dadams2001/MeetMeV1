@@ -5,16 +5,25 @@ import AttendeeDashboard from '../../components/AttendeeDashboard/AttendeeDashbo
 import Address from '../Address/Address';
 import { getEventAttendees } from "../../Common/Services/GetAttendees";
 import { useEffect, useState } from "react";
+import { addNewAttendee } from '../../Common/Services/GetAttendees';
+import Parse from 'parse';
+
 export default function MyEventGuest({event}, props) {
     const d = event.get('Date');
     const [attendees, setAttendees] = useState([]);
     const [submitted, setSubmitted] = useState(null);
+    const [newAttendee, setNewAttendee] = useState("");
 
   useEffect(() => {
-    getEventAttendees("yia8siddLu").then((response) => {
+    getEventAttendees(event.id).then((response) => {
       setAttendees(response);
     });
   }, []);
+
+  const onSubmitHandler = () => {
+    setSubmitted(true);
+    addNewAttendee(newAttendee, event)
+  }
 
     return(
         <div class="container">
@@ -38,11 +47,14 @@ export default function MyEventGuest({event}, props) {
             <AttendeeDashboard attendees={attendees} />
             {(!submitted) ?
                 <div className='FormContainer'>
-                    <input type="text" placeholder='Enter your name!' />
-                    <button onClick={()=>setSubmitted(true)}>Submit</button>
+                    <input 
+                        type="text" 
+                        onChange={(e) => setNewAttendee(e.target.value)}
+                        placeholder='Enter your name!' />
+                    <button onClick={()=>{onSubmitHandler()}}>Submit</button>
                 </div>
                 :
-                <p>
+                <p id="SeeYouThere">
                     We'll see you there!
                 </p>
             }

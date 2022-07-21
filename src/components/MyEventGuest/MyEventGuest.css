@@ -1,6 +1,6 @@
 .container {
     background-color: #FFFBF0;
-    position: absolute;
+    position: relative;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
@@ -9,6 +9,13 @@
     justify-content: flex-start;
     font-size: calc(10px + 2vmin);
     color: #003049;
-    position: relative;
+}
+
+.FormContainer {
+    margin: 50px 0;
+}
+
+#SeeYouThere {
+    margin: 50px 0;
 }
 

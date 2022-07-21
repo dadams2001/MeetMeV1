@@ -12,9 +12,6 @@ import CreateEventPage from "../pages/CreateEvent/CreateEvent.js";
 import Profile from "../pages/Profile/Profile.js";
 import Login from "../pages/Login/Login.js";
 import Register from "../pages/Register/Register.js";
-import MainModule from "./Main/Main.js";
-import MainGood from "./Main/MainGood";
-import MainHome from "./Main/MainHome";
 import LoginForm from "../pages/LoginForm/LoginForm.js";
 import ProtectedRouteBad from "../Common/AppTools/ProtectedRouteBad.js";
 import ProtectedRouteGood from "../Common/AppTools/ProtectedRouteGood.js";
@@ -43,8 +40,6 @@ export default function Components() {
                 <Register setIsLoggedIn={setIsLoggedIn}/>
               </ProtectedRouteGood>
           }/>
-          <Route path="/main" element={<MainModule />} />
-          <Route path="/home" element={<MainHome />} />
           <Route 
             path="/LoginForm" 
             element={

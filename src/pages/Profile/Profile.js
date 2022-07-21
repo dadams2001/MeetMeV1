@@ -40,7 +40,7 @@ const Profile = (props)  => {
     return (
       <div className="Profile">
       <Header/>
-      <div class="user-settings">
+      <div className="user-settings">
         <h1>Welcome back, {user.get("firstName") + ' ' + user.get("lastName")}</h1>
         <ul class="list" >
         <li>Full Name: <strong>{user.get('firstName')+' '+user.get('lastName')}</strong></li>
@@ -61,8 +61,8 @@ const Profile = (props)  => {
         <br />
         <div class="events">
         <EventDashboard UserPointer={user.id} />
-        <Footer/>
         </div>
+        <Footer/>
       </div>);
   } else {
     return (

@@ -61,7 +61,7 @@ const Register = ({setIsLoggedIn}) => {
   };
 
   return (
-    <div>
+    <div className='RegisterContainer'>
       <Header/>
       <div id="RegisterFormContainer">
         <RegisterForm

@@ -1,10 +1,14 @@
+.RegisterContainer {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #FFFBF0;
+}
 #RegisterFormContainer {
     display: flex;
-    background-color: #FFFBF0;
     flex-direction: row;
     justify-content: center;
 }
 
-#RegisterFormContainer * {
+/* #RegisterFormContainer * {
     margin: 8px 0;
-}
+} */
