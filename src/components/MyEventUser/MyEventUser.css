@@ -10,6 +10,18 @@
     position: relative;
 }
 
+.InputBox {
+    margin: 10px 0;
+}
+
+.EditButton {
+    margin-left: 20px;
+    border: none;
+    background-color: #236e96;
+    color: white;
+    border-radius: 15px;
+}
+
 .btn-form{
     padding: .5em;
     border-radius: 25px;
@@ -28,4 +40,8 @@
 .InputBox {
     display: flex;
     flex-direction: row;
+}
+
+#MakeSure {
+    margin: 20px;
 }

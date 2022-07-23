@@ -38,12 +38,12 @@ export default function MyEventUser({event}, props) {
                     <p>
                         Day: { d.toDateString()}
                     </p>
-                    <button onClick={()=>{setEventNameClicked(true)}} >Edit</button>
+                    <button className="EditButton" onClick={()=>{setEventNameClicked(true)}} >Edit</button>
                 </div>
                 :
                 <div className='InputBox'>
                     <input type="text" />
-                    <button onClick={()=>{setEventNameClicked(false)}}>Update</button>
+                    <button className="EditButton" onClick={()=>{setEventNameClicked(false)}}>Update</button>
                 </div>
             }
 
@@ -52,12 +52,12 @@ export default function MyEventUser({event}, props) {
                     <p>
                         When: {d.toLocaleTimeString()}
                     </p>
-                    <button onClick={()=>{setEventDateClicked(true)}} >Edit</button>
+                    <button className="EditButton" onClick={()=>{setEventDateClicked(true)}} >Edit</button>
                 </div>
                 :
                 <div className='InputBox'>
                     <input type="text" />
-                    <button onClick={()=>{setEventDateClicked(false)}}>Update</button>
+                    <button className="EditButton" onClick={()=>{setEventDateClicked(false)}}>Update</button>
                 </div>
             }
 
@@ -66,27 +66,15 @@ export default function MyEventUser({event}, props) {
                     <p>
                         Where: {event.get('Address')}
                     </p>
-                    <button onClick={()=>{setEventAddyClicked(true)}} >Edit</button>
+                    <button className="EditButton" onClick={()=>{setEventAddyClicked(true)}} >Edit</button>
                 </div>
                 :
                 <div className='InputBox'>
                     <input type="text" />
-                    <button onClick={()=>{setEventAddyClicked(false)}}>Update</button>
+                    <button className="EditButton" onClick={()=>{setEventAddyClicked(false)}}>Update</button>
                 </div>
             }
-        
-            {/* <ul class="list-form">
-                <li>
-                    Day: { d.toDateString()}
-                </li>
-                <li>
-                    When: {d.toLocaleTimeString()}
-                </li>
-                <li>
-                    Where: {event.get('Address')}
-                </li>
-            </ul> */}
-            <p>
+            <p id="MakeSure">
                 Make sure to invite your friends! Share this party by sending the link below
             </p>
             <button class="btn-form"

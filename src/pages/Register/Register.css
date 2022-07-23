@@ -1,7 +1,10 @@
 .RegisterContainer {
     min-height: 100vh;
+    position: relative;
+    top: -2.5vh;
     min-width: 100vw;
     background-color: #FFFBF0;
+    position: relative;
 }
 #RegisterFormContainer {
     display: flex;

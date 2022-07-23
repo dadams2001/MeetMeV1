@@ -17,8 +17,12 @@ export default function Header() {
                     <div class="dropdown">
                         <button class="dropbtn" id="menu">MENU</button>
                         <div class="dropdown-content">
-                            <Link to="/CreateEvent">CREATE</Link>
-                            <Link to="/">HOME</Link>
+                            <Link className="link" to="/CreateEvent">
+                                <h3>CREATE</h3>
+                            </Link>
+                            <Link className="link" to="/">
+                               <h3>HOME</h3>
+                            </Link>
                         </div>
                     </div>
                 </li>
@@ -29,11 +33,17 @@ export default function Header() {
                     <div class="dropdown">
                         <button class="dropbtn" id='profile'>PROFILE</button>
                         <div class="dropdown-content">
-                            <Link to="/Profile">PROFILE</Link>
+                            <Link className="link" to="/Profile">
+                                <h3>PROFILE</h3>
+                            </Link>
                             {(Parse.User.current()) ?
-                                <div id="logout" onClick={onLogoutHandler}>LOGOUT</div> 
+                                <div id="logout" onClick={onLogoutHandler}>
+                                    <h3>LOGOUT</h3>
+                                </div> 
                                 :
-                                <Link to="/Login">LOGIN</Link>
+                                <Link className="link" to="/Login">
+                                    <h3>LOGIN</h3>
+                                </Link>
                             }
                             
                         </div>
