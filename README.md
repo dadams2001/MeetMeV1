@@ -1,4 +1,5 @@
 # MeetME ReadMe
+This is the repository for a class project I made in the summer of 2022.  MeetMe allows users to RSVP to events once given an invite link.  Great for parties, barbeques, etc!
 # Lauren Stark and DJ Adams III 
  
 
